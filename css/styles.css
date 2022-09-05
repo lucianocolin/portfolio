@@ -70,6 +70,13 @@ header h4{
   height: 3rem;
 }
 
+@media (min-width: 768px){
+  .icons-container a i:hover{
+    transform: scale(1.2);
+    transition: all .5s;
+  }
+}
+
 /* ME SECTION */
 
 .me{
@@ -89,16 +96,16 @@ header h4{
   border-radius: 20px; */
 }
 
-/* .divisor{
-  background-color: #B71B67;
-  width: 100%;
-  height: 4rem;
-} */
-
 hr{
   width: 70%;
   margin: 0 auto;
   box-shadow: 8px 2px 4px black;
+}
+
+@media (min-width: 768px){
+  .me p{
+    padding: 2rem 15rem;
+  }
 }
 
 /* TECHNOLOGIES USED */
@@ -117,8 +124,8 @@ hr{
   font-size: 1rem;
   color: white;
   padding: 1rem;
+  width: 70%;
   background-color: #0F0F0F;
-  width: 60%;
   border-radius: 2rem;
 }
 
@@ -168,6 +175,22 @@ hr{
   height: 1.4rem !important;
 }
 
+@media (min-width: 768px){
+  .technologies h2{
+    width: 25%;
+  }
+
+  .cards-container{
+    gap: 1.2rem;
+    width: 50%;
+  }
+
+  .cards-container .tech-card:hover{
+    transform: scale(1.1);
+    transition: all .5s;
+  }
+}
+
 /* PROJECTS */
 
 .projects{
@@ -184,8 +207,8 @@ hr{
   font-size: 1rem;
   color: white;
   padding: 1rem;
+  width: 70%;
   background-color: #0F0F0F;
-  width: 60%;
   border-radius: 2rem;
 }
 
@@ -236,3 +259,14 @@ hr{
 /* .card-body p{
   text-shadow: 1px 1px 4px black;
 } */
+
+@media (min-width: 768px){
+  .projects h2{
+    width: 25%;
+  }
+
+  .projects-cards-container .projects-card:hover{
+    transform: scale(1.06);
+    transition: all .5s;
+  }
+}
