@@ -140,24 +140,33 @@ hr{
 }
 
 .cards-container .tech-card{
-  width: 7.5rem;
+  width: 6.5rem;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 0.5rem;
   padding: 1rem;
   min-height: 7.5rem;
   max-height: 10rem;
   font-family: 'Montserrat', sans-serif;
-  font-weight: bolder;
-  /* border: 2px solid #B71B67; */
+  font-weight: bold;
   box-shadow: 1px 1px 4px black;
+}
+
+.card-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .cards-container .tech-card img{
   width: 70%;
-  height: 80%;
+  height: auto;
+  max-height: max-content;
 }
 
 .cards-container .boots-logo{
