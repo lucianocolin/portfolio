@@ -44,8 +44,20 @@ const technologies = [
   { name: "Docker", logo: "./imgs/docker.svg", alt: "Docker Logo" },
   { name: "Tailwind", logo: "./imgs/tailwind-css.svg", alt: "Tailwind Logo" },
 ];
-
 const cardsContainer = document.querySelector(".cards-container");
+
+const projects = [
+  {
+    title: "Student Management",
+    description:
+      "Sistema de gestión educativo, para la gestión de inscripción en materias y seguimiento de notas.",
+    image: "./imgs/student-management-logo.png",
+    mainStack: "React, NestJS, TypeScript, PostgreSQL",
+    link: "https://lc-student-management.netlify.app/",
+  },
+];
+
+const projectsContainer = document.querySelector(".projects-cards-container");
 
 const createCards = () => {
   technologies.forEach((tech) => {
@@ -72,4 +84,24 @@ const createCards = () => {
   });
 };
 
+const addProjectCards = () => {
+  projects.forEach((project) => {
+    const card = document.createElement("div");
+
+    card.className = "card projects-card col-md-4 mb-4";
+    card.innerHTML = `
+      <img src="${project.image}" class="card-img-top" alt="${project.title}" />
+      <div class="card-body">
+        <h5 class="card-title">${project.title}</h5>
+        <p class="card-text">${project.description}</p>
+        <p class="card-text card-main-stack">Main Stack: ${project.mainStack}</p>
+        <a href="${project.link}" target="_blank" class="btn">Abrir página</a>
+      </div>
+    `;
+
+    projectsContainer.appendChild(card);
+  });
+};
+
 createCards();
+addProjectCards();
